@@ -2,16 +2,19 @@ import { FlatList, Text, View } from "react-native";
 import { Paylogs } from "../types/api.types";
 import styled from "styled-components/native";
 import { homeStyles } from "../styles/homeStyleSheets";
+import dayjs from "dayjs";
 
 type PayLoadPropsType = {
   payLoads: Array<Paylogs>;
+  dayNums: number;
 };
 
-const Payload = ({ payLoads }: PayLoadPropsType) => {
+const Payload = ({ payLoads, dayNums }: PayLoadPropsType) => {
   const DATA = Array.from({ length: 30 }).map((_, index) => ({
     id: index.toString(),
     title: `아이템 ${index + 1}`,
   }));
+  const dayData = dayjs().subtract(dayNums);
 
   return (
     <FlatList

@@ -7,6 +7,7 @@ import { Paylogs } from "../types/api.types";
 export default function HomeScreen() {
   const [totalMoney, setTotalMoney] = useState<number>(0);
   const [usefulMoney, setUsefulMoney] = useState<number>(0);
+  const [dayNums, setDayNum] = useState<number>(0);
   const testPaylogs: Paylogs[] = [
     {
       id: "1",
@@ -40,7 +41,7 @@ export default function HomeScreen() {
         </MoneyBlock>
       </StyledView>
       <Horizon />
-      <Payload payLoads={testPaylogs} />
+      <Payload dayNums={dayNums} payLoads={testPaylogs} />
     </Wrap>
   );
 }
