@@ -18,3 +18,21 @@ export type Paylogs = {
   money: number;
   logs: string;
 };
+
+export type DateTypes {
+   year : string;
+   month : string;
+   day : string;
+}
+
+/**
+ * 최소단위
+ */
+
+export interface ITotalPayMent {
+  id: string;
+  amount: string; // 금액
+  type: string; // 출금,입금
+  date: DateTypes; // 날짜
+  description: string; // 지출 설명
+}

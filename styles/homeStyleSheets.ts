@@ -37,6 +37,6 @@ export const homeStyles = StyleSheet.create({
     gap: "10",
   },
   ".moneylogs": {
-    fontSize: 20,
+    fontSize: 10,
   },
 });
